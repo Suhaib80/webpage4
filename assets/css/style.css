@@ -77,8 +77,12 @@ header ul li{
 .banner form label{
     display: none;
 }
-.banner form .searchForm{
+.banner form .searchForm.active{
+    display: block;
     margin-top: 8px;
+}
+.banner form .searchForm{
+    display: none;
 }
 .banner form .searchForm input,
 .banner form .searchForm select {
@@ -325,11 +329,194 @@ footer .international img{
 footer .international div{
     display: flex;
     justify-content: space-between;
-}footer .international div .inter1{
+}
+footer .international div .inter1{
     margin-right: 50px;
 }
 footer .bottomfooter .footmenu ul li{
     margin-right: 10px;
     display: inline-block;
 }
+footer .bottomfooter{
+    margin-top: 30px;
+}
+footer .bottomfooter .footmenu a{
+    color: #fff;
+}
+footer .bottomfooter .footmenu p{
+    font-size: 12px;
+    color: #c7abab;
+}
+footer .bottomfooter .social ul li{
+    display: inline-block;
+}
+footer .bottomfooter .social ul li a{
+    width: 15px;
+    height: 15px;
+    padding: 0px 2px;
+    color: #3b3535;
+    border-radius: 50%;
+    background: #ffffffaf;
+}
 /* Footer Section End */
+
+/* Media Query Section Start */
+@media screen and (max-width:1199px) {
+    header,.fun,
+    .subscribe,.destination,
+    .estimate,.blog
+    {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .banner{
+        padding-left: 96px;
+        padding-right: 30px;
+    }
+    .banner form .switchButton{
+        padding-top: 13px;
+    }
+    .banner form .searchForm input, select{
+        width: 143px;
+        height: 34px;
+        margin-bottom: 13px;
+    }
+    .banner form{
+        width: 81%;
+        height: 133px;
+    }
+    .subscribe .but form input{
+        width: 59%;
+    }
+    .subscribe{
+        height: auto;
+    }
+    .subscribe .but form button {
+        width: 120px;
+    }
+    .subscribe .new{
+        padding-left: 50px;
+    }
+    .subscribe .but{
+        padding-left: 180px;
+        padding-bottom: 100px;
+    }
+    footer{
+        padding: 20px 17px;
+    }
+}
+@media screen and (max-width:991px) {
+    .banner form {
+        width: 80%;
+        height: 178px;
+    }
+    .fun ul li {
+        width: 98px;
+        height: 98px;
+        font-size: 20px;
+    }
+    .fun{
+        height: 295px;
+    }
+    .subscribe .but {
+        padding-left: 130px;
+    }
+    .subscribe {
+        height: 350px;
+    }
+    .subscribe .new {
+        padding: 10px 10px 10px 10px;
+    }
+    .destination ul{
+        grid-template-columns: repeat(2, 50%);
+    }
+    .destination{
+        padding-right: 80px;
+    }
+    .estimate img {
+        width: 230px;
+        height: 298px;
+    }
+    .estimate select, .estimate input {
+        width: 129px;
+        height: 40px;
+        margin-right: 2px;
+    }
+    .blog-content{
+        display: inline;
+    }
+    footer .topfoot .left,
+    footer .topfoot .right
+    {
+        display: block;
+    }
+}
+@media screen and (max-width:767px) {
+    .banner{
+        height: 740px;
+    }
+    header .nav{
+        display: none;
+    }
+    .banner form{
+        left: 30%;
+        top: 323px;
+        width: auto;
+        height: 337px;
+        flex-direction: column;
+    }
+    .banner form .searchForm input,
+    .banner form .searchForm select{
+        display: block;
+        width: 100%;
+    }
+    .banner form .searchForm span{
+        display: none;
+    }
+    .banner form button.smt {
+            height: 35px;
+            width: 100%;
+            border-radius: 0;
+            margin: 0px 234px 0px 1px;
+    }
+    .estimate input {
+        width: 160px;
+        margin-right: 4px;
+    }
+    .fun{
+        height: 390px;
+    }
+    .fun ul{
+        display: grid;
+        grid-gap: 10px;
+        margin-left: 5%;
+        grid-template-rows: 130px 130px;
+        grid-template-columns: repeat(3,33%);
+    }
+    .fun ul li {
+        width: 136px;
+        height: 100px;
+        font-size: 37px;
+    }
+    .subscribe{
+        height: 239px;
+    }
+}
+@media screen and (max-width:575px){
+    .banner form{
+        left: 25%;
+    }
+    .fun {
+        height: 488px;
+    }
+    .fun ul {
+        grid-gap: -2px;
+        margin-left: 4%;
+        grid-template-rows: 110px 110px;
+        grid-template-columns: repeat(2,50%);
+    }
+    .estimate img{
+        display:none;
+    }
+}
+/* Media Query Section End */
